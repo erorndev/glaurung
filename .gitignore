@@ -19,4 +19,6 @@ build/
 *.user
 
 .DS_Store
-Thumbs.db
+Thumbs.db.idea/
+format
+.idea/
