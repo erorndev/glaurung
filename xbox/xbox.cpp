@@ -17,7 +17,6 @@ static const char *glaurung_ascii = R"(
 void xbox_init() {
   XVideoSetMode(720, 480, 32, REFRESH_DEFAULT);
 
-  // Clear screen and print the big logo
   debugClearScreen();
   debugPrint("%s", glaurung_ascii);
 

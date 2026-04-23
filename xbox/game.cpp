@@ -47,7 +47,6 @@ static void draw_board(const std::string &msg, int depth) {
 void xbox_game_loop() {
   gamePosition = new Position();
 
-  // LOAD YOUR FEN HERE
   std::string myFen =
       "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3";
   gamePosition->from_fen(myFen);

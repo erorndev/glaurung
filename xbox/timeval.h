@@ -6,11 +6,11 @@ struct timeval {
   long tv_usec;
 };
 
-inline int gettimeofday(struct timeval *tp, void *tzp) {
+inline int gettimeofday(struct timeval *tp, void *) {
   ULONGLONG t;
   KeQuerySystemTime((LARGE_INTEGER *)&t);
-  t /= 10000; // convert to milliseconds
-  tp->tv_sec = t / 1000;
-  tp->tv_usec = (t % 1000) * 1000;
+  t -= 116444736000000000ULL;
+  tp->tv_sec  = (long)(t / 10000000ULL);
+  tp->tv_usec = (long)((t % 10000000ULL) / 10);
   return 0;
 }
