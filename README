@@ -1,16 +1,5 @@
 Glaurung Chess Engine
 ──────────────────────────────────────
-
 This is a specialized port of the Glaurung 2.2 engine
 for the Original Xbox hardware
 (Pentium III 733 MHz, 64 MB RAM).
-
-The engine currently boots into a native Xbox video loop.
-Standard UCI stdin/stdout is redirected to the console screen
-for NPS monitoring.
-
-There are some optimizations that I did to the
-Transposition Table(s) and the bitboard implementation,
-but I couldn't track them all anymore.
-
-The TT definitely uses hardware intrinsics.
